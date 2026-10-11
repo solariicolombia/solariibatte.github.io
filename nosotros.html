@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solarii - Nosotros</title>
+    <!-- ICONO DE LA PÁGINA (Intacto) -->
+    <link rel="icon" href="icono.jpg" type="image/jpeg">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Texto más grande (Arial 18px) y legible */
+        .texto-nosotros {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Estilo para el efecto de ir bajando (Animación de aparición) */
+        .elemento-animado {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .elemento-animado.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+<!-- MENÚ -->
+<header>
+    <div class="logo">
+        ☀ Solarii
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="juegahorro.html">JuegAhorro</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="py-5 my-5">
+        <div class="container py-4" style="max-width: 900px;">
+            <div class="text-center mb-5 elemento-animado">
+                <h2 class="fw-bold text-white mb-2 display-5">Sobre Solarii</h2>
+                <div class="mx-auto" style="width: 60px; height: 4px; background-color: #53d86b;"></div>
+            </div>
+            
+            <div class="row g-5">
+                <!-- 1. ¿Por qué decidimos crear Solarii? -->
+                <div class="col-12 elemento-animado">
+                    <div class="p-4 p-md-5 rounded bg-dark border border-secondary shadow-lg">
+                        <h4 class="text-warning h3 fw-bold mb-3">¿Por qué decidimos crear Solarii?</h4>
+                        <p class="texto-nosotros text-light m-0">
+                            A la hora de hacer nuestro estudio de mercado, nos dimos cuenta de que una gran parte de la poblacion de Madrid usan el celular en su ambito cotidiano o laboral con frecuencia y que muchos no disponen de formas faciles de cargar sus dispositivos, por lo que quisimos oferecer una forma economica y de calidad para que las personas carguen donde sea sus dispositivos, ademas de que sea autorecargable gracias a la energia solar, asi, no dependiendo de cargar su powerbank en enchufes, siendo que estos hacen falta en varioss lugares.
+                    </div>
+                </div>
+
+                <!-- 2. Misión -->
+                <div class="col-12 elemento-animado">
+                    <div class="p-4 p-md-5 rounded bg-dark border border-secondary shadow-lg">
+                        <h4 class="text-warning h3 fw-bold mb-3">Misión</h4>
+                        <p class="texto-nosotros text-light m-0">
+                            Diseñar y desarrollar con éxito un prototipo funcional de powerbank recargable como proyecto académico del programa SENA en 10mo y proximamente 11. Nuestro objetivo es brindar una alternativa accesible de energía portátil para la el Colegio y los habitantes de Madrid, promoviendo la conciencia sobre el uso eficiente de la electricidad y el aprovechamiento de fuentes de energía limpias en el municipio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Visión -->
+                <div class="col-12 elemento-animado">
+                    <div class="p-4 p-md-5 rounded bg-dark border border-secondary shadow-lg">
+                        <h4 class="text-warning h3 fw-bold mb-3">Visión</h4>
+                        <p class="texto-nosotros text-light m-0">
+                            Para 11, buscamos lograr hacer una version completa de la bateria, saliendo del prototipo y consolidando nuestro proyecto productivo SENA. Tambien aspiramos a salir del ambito estudiantil y ofrecer nuestras powerbanks a Madrid y los municipios aledaños, y por consiguiente, lograr que las personas descubran y usen las energias limpias, viendolas como una forma de progreso y descontaminacion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script JavaScript para activar la animación conforme vas bajando -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elementos = document.querySelectorAll(".elemento-animado");
+
+            const verificarScroll = () => {
+                elementos.forEach(elemento => {
+                    const posicionRect = elemento.getBoundingClientRect().top;
+                    const alturaPantalla = window.innerHeight * 0.85;
+
+                    if (posicionRect < alturaPantalla) {
+                        elemento.classList.add("visible");
+                    }
+                });
+            };
+
+            // Ejecutar al cargar y al hacer scroll hacia abajo
+            verificarScroll();
+            window.addEventListener("scroll", verificarScroll);
+        });
+    </script>
+</body>
+</html>

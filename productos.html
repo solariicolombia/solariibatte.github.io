@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solarii - Productos</title>
+    <link rel="icon" href="icono.jpg" type="image/jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <header>
+        <div class="logo">
+            ☀ Solarii
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="juegahorro.html">JuegAhorro</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- DETALLE DE PRODUCTO PROFESIONAL -->
+    <section class="seccion-producto-detallado" style="padding: 60px 8%; background-color: #000000; color: #ffffff;">
+        <div class="producto-wrapper" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; max-width: 1000px; margin: 0 auto; background-color: #121212; padding: 40px; border-radius: 12px; border: 1px solid #333;">
+            
+            <!-- Imagen grande del producto -->
+            <div class="producto-imagen" style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="sol.jpg" alt="Powerbank Solar Solarii" style="width: 100%; max-width: 450px; height: auto; border-radius: 8px; border: 2px solid #53d86b; object-fit: cover;">
+            </div>
+
+            <!-- Información y Precios -->
+            <div class="producto-info" style="flex: 1; min-width: 300px; text-align: left;">
+                <p style="color: #f4b942; font-weight: bold; letter-spacing: 1px; margin-bottom: 10px;">INNOVACIÓN SENA</p>
+                <h1 style="font-size: 36px; margin-bottom: 15px; color: #ffffff;">Powerbank Solar Solarii</h1>
+                <p style="color: #b0b0b0; line-height: 1.6; margin-bottom: 20px;">
+                    Dispositivo portátil con panel fotovoltaico, batería de alta autonomía y monitoreo inteligente en tiempo real mediante Arduino y pantalla OLED.
+                </p>
+
+                <!-- Precios y Descuento Dinámico -->
+                <div class="precio-contenedor" style="margin-bottom: 25px;">
+                    <span style="font-size: 16px; color: #888; display: block; margin-bottom: 5px;">Precio regular:</span>
+                    <span style="font-size: 24px; text-decoration: line-through; color: #888; margin-right: 15px;">$300.000 COP</span>
+                    <div style="margin-top: 10px;">
+                        <span style="font-size: 14px; background-color: #6d4c2a; color: #071a2b; padding: 4px 8px; border-radius: 4px; font-weight: bold;" id="etiqueta-descuento">0% de Descuento aplicado</span>
+                    </div>
+                    <div style="font-size: 32px; font-weight: bold; color: #f4b942; margin-top: 10px;" id="precio-final">
+                        $300.000 COP
+                    </div>
+                </div>
+
+                <!-- Botones de acción conectados a JuegAhorro -->
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="juegahorro.html" style="background-color: #071a2b; color: #ffffff; text-align: center; padding: 14px; border-radius: 6px; text-decoration: none; font-weight: bold; border: 1px solid #f4b942; transition: 0.2s;">
+                        🎮 Juega en JuegAhorro para ganar descuento
+                    </a>
+                    <button onclick="alert('¡Compra simulada con éxito! Gracias por apoyar Solarii.')" style="background-color: #6d4c2a; color: #071a2b; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                        Comprar Ahora
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Solarii - Proyecto SENA. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT PARA LEER EL DESCUENTO DE JUEGAHORRO -->
+    <script>
+        window.onload = function() {
+            // Lee el descuento guardado previamente en el navegador por el minijuego
+            let descuentoGuardado = localStorage.getItem("descuentoSolarii");
+            
+            if (descuentoGuardado) {
+                let porcentaje = parseInt(descuentoGuardado);
+                let precioOriginal = 300000;
+                let descuentoMonto = (precioOriginal * porcentaje) / 100;
+                let precioConDescuento = precioOriginal - descuentoMonto;
+
+                // Actualiza los textos en la página de productos
+                document.getElementById("etiqueta-descuento").innerText = porcentaje + "% de Descuento aplicado desde JuegAhorro";
+                document.getElementById("precio-final").innerText = "$" + precioConDescuento.toLocaleString('es-CO') + " COP";
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+/* =========================
+   GENERAL
+   ========================= */
+/* Estilos generales para el minijuego con fondo cálido */
+h1 {
+    color: #d97706 !important;
+}
+body {
+    background-color: #000000;
+    color: #f5e7c3;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal del juego */
+.juego-container, .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #111111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #f4b942;
+    box-shadow: 0 4px 10px rgba(244, 185, 66, 0.15);
+}
+
+/* Títulos y textos */
+h1, h2, h3 {
+    color: #f5e7c3;
+}
+
+p, label {
+    color: #d9c79a;
+}
+
+/* Elementos interactivos (Inputs y botones) */
+input, select {
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #f4b942;
+    border-radius: 5px;
+    color: #f5e7c3;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #f5a623;
+    color: #fffaf0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #f7c95d;
+    color: #1a1a1a;
+}
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* FUENTE GENERAL */
+
+* {
+    font-family: Arial, sans-serif;
+}
+}
+
+
+body {
+    body {
+        font-family: Arial, sans-serif;
+        color: #2f2200;
+        background-color: #fffaf0;
+      }
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+   header {
+    background-color: #f4b942;
+    color: #2f2200;
+    height: 66px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2f2200;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    height: 100%;
+}
+
+nav a {
+    color: #2f2200;
+    text-decoration: none;
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+nav a:hover {
+    color: #d97706;
+}
+
+
+/* =========================
+   TITULO
+   ========================= */
+
+.titulo {
+    text-align: center;
+
+    padding: 45px 20px 25px;
+}
+
+
+.subtitulo {
+    color: #d97706;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.titulo h1 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    color: #2f2200;
+}
+
+
+.titulo > p {
+    color: #6d4c2a;
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+}
+
+
+.titulo .regla {
+    color: #d97706;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   JUEGO
+   ========================= */
+
+#game-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 20px auto;
+}
+
+
+.game-canvas {
+    width: 400px;
+
+    height: 400px;
+
+    max-width: 90vw;
+
+    max-height: 90vw;
+
+    display: block;
+
+    background-color: #fff8ec;
+
+    border: 5px solid #f59e0b;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(140, 83, 12, 0.2);
+}
+
+
+/* =========================
+   INFORMACION
+   ========================= */
+
+.informacion {
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background-color: #fffdf7;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(140, 83, 12, 0.1);
+}
+
+
+.informacion h2 {
+    color: #2f2200;
+
+    margin-bottom: 15px;
+}
+
+
+#puntos {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin: 10px;
+    color: #2f2200;
+}
+
+
+#descuento {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #d97706;
+
+    margin: 10px;
+}
+
+
+#mensaje {
+    color: #6d4c2a;
+
+    line-height: 1.5;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.keys {
+    text-align: center;
+
+    padding: 10px;
+
+    margin-bottom: 40px;
+}
+
+
+.arr {
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 5px;
+
+    background-color: #071a2b;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 28px;
+
+    user-select: none;
+
+    transition: 0.1s;
+}
+
+
+.arr:hover {
+    background-color: #53a653;
+}
+
+
+.arr:active {
+    transform: scale(0.9);
+
+    background-color: #53d86b;
+
+    color: #071a2b;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px;
+    }
+
+
+    nav {
+        text-align: center;
+    }
+
+
+    nav a {
+        margin: 5px;
+
+        font-size: 13px;
+    }
+
+
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+
+    .game-canvas {
+        width: 90vw;
+
+        height: 90vw;
+    }
+
+
+    .arr {
+        width: 60px;
+
+        height: 60px;
+    }
+
+}

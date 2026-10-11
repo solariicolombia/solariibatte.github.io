@@ -1,0 +1,293 @@
+/* =========================================================
+   GENERAL Y ESTILO BASE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #f5e7c3;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+   TITULOS Y TIPOGRAFIA (Amarillo / naranja cálido)
+   ========================================================= */
+
+h1 {
+    text-align: center;
+    color: #f4b942;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    color: #f5e7c3;
+}
+
+p {
+    color: #d9c79a;
+}
+
+/* =========================================================
+   MENU SUPERIOR
+   ========================================================= */
+
+header {
+    background-color: #f4b942;
+    color: #2f2200;
+    height: 66px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2f2200;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    height: 100%;
+}
+
+nav a {
+    color: #2f2200;
+    text-decoration: none;
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d97706;
+}
+
+/* =========================================================
+   SECCION CONTACTO (Contenedor Grid Estable)
+   ========================================================= */
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 25px;
+    background-color: #111111;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #f4b942;
+    box-shadow: 0 4px 15px rgba(244, 185, 66, 0.15);
+}
+
+/* =========================================================
+   TARJETAS DE REDES SOCIALES
+   ========================================================= */
+
+.red {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #f4b942;
+    border-radius: 10px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.red:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+    transform: translateY(-3px);
+}
+
+.red img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.red a {
+    color: #d97706;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.red a:hover {
+    color: #f59e0b;
+}
+
+/* =========================================================
+   INFORMACION CENTRAL
+   ========================================================= */
+
+.info {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #f4b942;
+    box-shadow: 0 4px 10px rgba(244, 185, 66, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h2 {
+    color: #f5e7c3;
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.info b, .info .destacado {
+    color: #f4b942;
+    font-weight: bold;
+}
+
+.info p {
+    color: #d9c79a;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   POSICIONES DE LAS TARJETAS EN EL GRID
+   ========================================================= */
+
+.contacto .red:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.contacto .red:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.contacto .red:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.contacto .red:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+button {
+    padding: 12px 20px;
+    background-color: #f5a623;
+    color: #fffaf0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #f7c95d;
+    color: #2f2200;
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVO (CELULARES)
+   ========================================================= */
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .contacto .red:nth-child(1),
+    .contacto .red:nth-child(3),
+    .contacto .red:nth-child(4),
+    .contacto .red:nth-child(5),
+    .contacto .info {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .red {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .red img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .red a {
+        font-size: 18px;
+    }
+
+    .info {
+        padding: 25px;
+    }
+
+    .info h2 {
+        font-size: 22px;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
